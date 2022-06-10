@@ -1,0 +1,11 @@
+query ListCollections {
+  collections(sort: {sortKey: CREATED, sortDirection: ASC}) {
+    nodes {
+      address
+      name
+      symbol
+    }
+  }
+}
+
+

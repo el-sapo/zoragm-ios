@@ -1,0 +1,19 @@
+
+query Wallet {
+  tokens(networks: [{network: ETHEREUM, chain: MAINNET}],
+        pagination: {limit: 3},
+        where: {ownerAddresses: "elsapo.eth"}) {
+    nodes {
+      token {
+        collectionAddress
+        tokenId
+        name
+        owner
+        image {
+          url
+        }
+        metadata
+      }
+    }
+  }
+}

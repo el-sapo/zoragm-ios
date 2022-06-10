@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9AC0FA2851AA4800883189 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC0F92851AA4800883189 /* API.swift */; };
+		0C9AC0FD2851AAA900883189 /* ZOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC0FC2851AAA900883189 /* ZOManager.swift */; };
+		0C9AC0FF2851AABD00883189 /* ZONetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC0FE2851AABD00883189 /* ZONetwork.swift */; };
+		0C9AC23328526F5100883189 /* wallet.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0C9AC23228526F5100883189 /* wallet.graphql */; };
+		0C9AC23528527A5A00883189 /* ZOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC23428527A5A00883189 /* ZOHelper.swift */; };
 		0CF41E1C285193210040B062 /* zoramaniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E1B285193210040B062 /* zoramaniaApp.swift */; };
 		0CF41E1E285193210040B062 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E1D285193210040B062 /* ContentView.swift */; };
 		0CF41E20285193230040B062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF41E1F285193230040B062 /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 		0CF41E2D285193230040B062 /* zoramaniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E2C285193230040B062 /* zoramaniaTests.swift */; };
 		0CF41E37285193240040B062 /* zoramaniaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E36285193240040B062 /* zoramaniaUITests.swift */; };
 		0CF41E39285193240040B062 /* zoramaniaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E38285193240040B062 /* zoramaniaUITestsLaunchTests.swift */; };
+		0CF41E4928519DC30040B062 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CF41E4828519DC30040B062 /* schema.json */; };
+		0CF41E4B28519DFC0040B062 /* queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0CF41E4A28519DFC0040B062 /* queries.graphql */; };
+		0E329C8AAC2051D97006DA86 /* Pods_zoramaniaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D4CADAA94FEC2B949E23C6 /* Pods_zoramaniaTests.framework */; };
+		1AE07ADDED917F306C27C2BC /* Pods_zoramania.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C87B275BCCB44A2939C203A /* Pods_zoramania.framework */; };
+		B2A07A326DB27254C43CF5BE /* Pods_zoramania_zoramaniaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A674D30C5DED82266E4406B /* Pods_zoramania_zoramaniaUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9AC0F92851AA4800883189 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		0C9AC0FC2851AAA900883189 /* ZOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOManager.swift; sourceTree = "<group>"; };
+		0C9AC0FE2851AABD00883189 /* ZONetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZONetwork.swift; sourceTree = "<group>"; };
+		0C9AC23228526F5100883189 /* wallet.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = wallet.graphql; sourceTree = "<group>"; };
+		0C9AC23428527A5A00883189 /* ZOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOHelper.swift; sourceTree = "<group>"; };
 		0CF41E18285193210040B062 /* zoramania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoramania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF41E1B285193210040B062 /* zoramaniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoramaniaApp.swift; sourceTree = "<group>"; };
 		0CF41E1D285193210040B062 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +59,17 @@
 		0CF41E32285193240040B062 /* zoramaniaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zoramaniaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF41E36285193240040B062 /* zoramaniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoramaniaUITests.swift; sourceTree = "<group>"; };
 		0CF41E38285193240040B062 /* zoramaniaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoramaniaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0CF41E4828519DC30040B062 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		0CF41E4A28519DFC0040B062 /* queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queries.graphql; sourceTree = "<group>"; };
+		2CEC156A73982FD382CAAA3C /* Pods-zoramaniaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoramaniaTests.release.xcconfig"; path = "Target Support Files/Pods-zoramaniaTests/Pods-zoramaniaTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C87B275BCCB44A2939C203A /* Pods_zoramania.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zoramania.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2261D1237F834E8F665252 /* Pods-zoramania.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoramania.release.xcconfig"; path = "Target Support Files/Pods-zoramania/Pods-zoramania.release.xcconfig"; sourceTree = "<group>"; };
+		8A674D30C5DED82266E4406B /* Pods_zoramania_zoramaniaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zoramania_zoramaniaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13C0F8ED382A7B4F0C3E751 /* Pods-zoramania.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoramania.debug.xcconfig"; path = "Target Support Files/Pods-zoramania/Pods-zoramania.debug.xcconfig"; sourceTree = "<group>"; };
+		C89EE005E53A5626DCC91FBD /* Pods-zoramania-zoramaniaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoramania-zoramaniaUITests.release.xcconfig"; path = "Target Support Files/Pods-zoramania-zoramaniaUITests/Pods-zoramania-zoramaniaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D9D4CADAA94FEC2B949E23C6 /* Pods_zoramaniaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zoramaniaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F64D670B669BA44FB4EC1F6A /* Pods-zoramania-zoramaniaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoramania-zoramaniaUITests.debug.xcconfig"; path = "Target Support Files/Pods-zoramania-zoramaniaUITests/Pods-zoramania-zoramaniaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FEDCAB4220E421A0326B61D3 /* Pods-zoramaniaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoramaniaTests.debug.xcconfig"; path = "Target Support Files/Pods-zoramaniaTests/Pods-zoramaniaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE07ADDED917F306C27C2BC /* Pods_zoramania.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E329C8AAC2051D97006DA86 /* Pods_zoramaniaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +93,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A07A326DB27254C43CF5BE /* Pods_zoramania_zoramaniaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C9AC0FB2851AA9B00883189 /* ZO */ = {
+			isa = PBXGroup;
+			children = (
+				0C9AC0FC2851AAA900883189 /* ZOManager.swift */,
+				0C9AC0FE2851AABD00883189 /* ZONetwork.swift */,
+				0C9AC23428527A5A00883189 /* ZOHelper.swift */,
+			);
+			path = ZO;
+			sourceTree = "<group>";
+		};
+		0C9AC23128526A2000883189 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0CF41E0F285193210040B062 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +124,8 @@
 				0CF41E2B285193230040B062 /* zoramaniaTests */,
 				0CF41E35285193240040B062 /* zoramaniaUITests */,
 				0CF41E19285193210040B062 /* Products */,
+				4EEF3DA206E09EC4E5DBB926 /* Pods */,
+				76980E0FFF98116AA1D6B5E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +142,12 @@
 		0CF41E1A285193210040B062 /* zoramania */ = {
 			isa = PBXGroup;
 			children = (
+				0C9AC23128526A2000883189 /* Views */,
+				0C9AC0FB2851AA9B00883189 /* ZO */,
+				0C9AC0F92851AA4800883189 /* API.swift */,
+				0CF41E4A28519DFC0040B062 /* queries.graphql */,
+				0C9AC23228526F5100883189 /* wallet.graphql */,
+				0CF41E4828519DC30040B062 /* schema.json */,
 				0CF41E1B285193210040B062 /* zoramaniaApp.swift */,
 				0CF41E1D285193210040B062 /* ContentView.swift */,
 				0CF41E1F285193230040B062 /* Assets.xcassets */,
@@ -127,6 +181,29 @@
 			path = zoramaniaUITests;
 			sourceTree = "<group>";
 		};
+		4EEF3DA206E09EC4E5DBB926 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C13C0F8ED382A7B4F0C3E751 /* Pods-zoramania.debug.xcconfig */,
+				5C2261D1237F834E8F665252 /* Pods-zoramania.release.xcconfig */,
+				F64D670B669BA44FB4EC1F6A /* Pods-zoramania-zoramaniaUITests.debug.xcconfig */,
+				C89EE005E53A5626DCC91FBD /* Pods-zoramania-zoramaniaUITests.release.xcconfig */,
+				FEDCAB4220E421A0326B61D3 /* Pods-zoramaniaTests.debug.xcconfig */,
+				2CEC156A73982FD382CAAA3C /* Pods-zoramaniaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		76980E0FFF98116AA1D6B5E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C87B275BCCB44A2939C203A /* Pods_zoramania.framework */,
+				8A674D30C5DED82266E4406B /* Pods_zoramania_zoramaniaUITests.framework */,
+				D9D4CADAA94FEC2B949E23C6 /* Pods_zoramaniaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CF41E3C285193240040B062 /* Build configuration list for PBXNativeTarget "zoramania" */;
 			buildPhases = (
+				90F9F92A46E2C349AA919955 /* [CP] Check Pods Manifest.lock */,
+				0CF41E4C28519F1C0040B062 /* Generate Apollo GraphQL API */,
 				0CF41E14285193210040B062 /* Sources */,
 				0CF41E15285193210040B062 /* Frameworks */,
 				0CF41E16285193210040B062 /* Resources */,
+				15149C4C47286D30244C31E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CF41E3F285193240040B062 /* Build configuration list for PBXNativeTarget "zoramaniaTests" */;
 			buildPhases = (
+				C1E7102A4D862B583CE220F6 /* [CP] Check Pods Manifest.lock */,
 				0CF41E24285193230040B062 /* Sources */,
 				0CF41E25285193230040B062 /* Frameworks */,
 				0CF41E26285193230040B062 /* Resources */,
@@ -169,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CF41E42285193240040B062 /* Build configuration list for PBXNativeTarget "zoramaniaUITests" */;
 			buildPhases = (
+				C28EB43B4778481BC80C4541 /* [CP] Check Pods Manifest.lock */,
 				0CF41E2E285193240040B062 /* Sources */,
 				0CF41E2F285193240040B062 /* Frameworks */,
 				0CF41E30285193240040B062 /* Resources */,
+				AA07220FA2955FB7D34B2CCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,7 +314,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9AC23328526F5100883189 /* wallet.graphql in Resources */,
 				0CF41E23285193230040B062 /* Preview Assets.xcassets in Resources */,
+				0CF41E4928519DC30040B062 /* schema.json in Resources */,
+				0CF41E4B28519DFC0040B062 /* queries.graphql in Resources */,
 				0CF41E20285193230040B062 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,12 +338,137 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CF41E4C28519F1C0040B062 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --passthroughCustomScalars --localSchemaFile=\"schema.json\" API.swift\n";
+		};
+		15149C4C47286D30244C31E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zoramania/Pods-zoramania-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zoramania/Pods-zoramania-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zoramania/Pods-zoramania-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90F9F92A46E2C349AA919955 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zoramania-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA07220FA2955FB7D34B2CCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zoramania-zoramaniaUITests/Pods-zoramania-zoramaniaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zoramania-zoramaniaUITests/Pods-zoramania-zoramaniaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zoramania-zoramaniaUITests/Pods-zoramania-zoramaniaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1E7102A4D862B583CE220F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zoramaniaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C28EB43B4778481BC80C4541 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zoramania-zoramaniaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0CF41E14285193210040B062 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0CF41E1E285193210040B062 /* ContentView.swift in Sources */,
+				0C9AC0FA2851AA4800883189 /* API.swift in Sources */,
+				0C9AC0FF2851AABD00883189 /* ZONetwork.swift in Sources */,
+				0C9AC0FD2851AAA900883189 /* ZOManager.swift in Sources */,
+				0C9AC23528527A5A00883189 /* ZOHelper.swift in Sources */,
 				0CF41E1C285193210040B062 /* zoramaniaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -411,6 +622,7 @@
 		};
 		0CF41E3D285193240040B062 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13C0F8ED382A7B4F0C3E751 /* Pods-zoramania.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,6 +651,7 @@
 		};
 		0CF41E3E285193240040B062 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C2261D1237F834E8F665252 /* Pods-zoramania.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,6 +680,7 @@
 		};
 		0CF41E40285193240040B062 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDCAB4220E421A0326B61D3 /* Pods-zoramaniaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +700,7 @@
 		};
 		0CF41E41285193240040B062 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CEC156A73982FD382CAAA3C /* Pods-zoramaniaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +720,7 @@
 		};
 		0CF41E43285193240040B062 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64D670B669BA44FB4EC1F6A /* Pods-zoramania-zoramaniaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +738,7 @@
 		};
 		0CF41E44285193240040B062 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C89EE005E53A5626DCC91FBD /* Pods-zoramania-zoramaniaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

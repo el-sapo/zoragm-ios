@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var networkResult = ""
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text(networkResult)
+            .onAppear {
+                ZONetwork.shared.getTopCollections()
+                ZONetwork.shared.getWalletAddress(["elsapo.eth"])
+            }
+                
     }
 }
 
