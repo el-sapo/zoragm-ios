@@ -14,9 +14,15 @@ struct ContentView: View {
         Text(networkResult)
             .onAppear {
                 ZONetwork.shared.getTopCollections()
-                ZONetwork.shared.getWalletAddress(["elsapo.eth"])
+                ZONetwork.shared.getWalletAddresses(["elsapo.eth"]) { result in
+                    switch result {
+                    case .success(let metadataList):
+                        print(metadataList.count)
+                    case .failure(_):
+                        print("failure")
+                    }
+                }
             }
-                
     }
 }
 

@@ -1,8 +1,8 @@
 
-query Wallet {
+query Wallet($addresses: [String!]) {
   tokens(networks: [{network: ETHEREUM, chain: MAINNET}],
         pagination: {limit: 3},
-        where: {ownerAddresses: "elsapo.eth"}) {
+        where: {ownerAddresses: $addresses}) {
     nodes {
       token {
         collectionAddress

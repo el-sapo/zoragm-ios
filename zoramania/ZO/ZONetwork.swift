@@ -31,19 +31,36 @@ class ZONetwork {
         }
     }
     
-    public func getWalletAddress(_ address: [String]) {
-        apollo.fetch(query: WalletQuery()) { result in
+    public func getWalletAddresses(_ addresses: [String], completionHandler: @escaping (Result<[CustomMetadata], Error>)->()) {
+        apollo.fetch(query: WalletQuery(addresses: addresses)) { result in
             switch result {
               case .success(let graphQLResult):
                 if let tokens = graphQLResult.data?.tokens.nodes {
-                    print("success")
+                    var resultTokens: [CustomMetadata] = [];
+                    for token in tokens {
+                        // JSON deserializer crashes with some contents in metadata, so we have to do it manually
+                        switch token.token.metadata {
+                        case .dictionary(let metaItems):
+                            let metadata = CustomMetadata(items: metaItems)
+                            resultTokens.append(metadata)
+                        case .array(_):
+                            print("metadata should be dictionary")
+                        case .none:
+                            print("metadata is empty")
+                        }
+                    }
+                    print("tokens found: \(resultTokens.count)")
+                    completionHandler(.success(resultTokens))
                 } else if let errors = graphQLResult.errors {
-                  // GraphQL errors
-                  print(errors)
+                    // GraphQL errors
+                    print(errors)
+                    let error = NSError(domain: "", code: 200, userInfo: nil)
+                    completionHandler(.failure(error))
                 }
               case .failure(let error):
                 // Network or response format errors
                 print(error)
+                completionHandler(.failure(error))
               }
         }
     }

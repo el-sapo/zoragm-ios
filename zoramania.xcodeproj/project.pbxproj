@@ -12,6 +12,7 @@
 		0C9AC0FF2851AABD00883189 /* ZONetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC0FE2851AABD00883189 /* ZONetwork.swift */; };
 		0C9AC23328526F5100883189 /* wallet.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0C9AC23228526F5100883189 /* wallet.graphql */; };
 		0C9AC23528527A5A00883189 /* ZOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC23428527A5A00883189 /* ZOHelper.swift */; };
+		0C9AC2392852E17A00883189 /* CustomMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC2382852E17A00883189 /* CustomMetadata.swift */; };
 		0CF41E1C285193210040B062 /* zoramaniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E1B285193210040B062 /* zoramaniaApp.swift */; };
 		0CF41E1E285193210040B062 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E1D285193210040B062 /* ContentView.swift */; };
 		0CF41E20285193230040B062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF41E1F285193230040B062 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		0C9AC0FE2851AABD00883189 /* ZONetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZONetwork.swift; sourceTree = "<group>"; };
 		0C9AC23228526F5100883189 /* wallet.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = wallet.graphql; sourceTree = "<group>"; };
 		0C9AC23428527A5A00883189 /* ZOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOHelper.swift; sourceTree = "<group>"; };
+		0C9AC2382852E17A00883189 /* CustomMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMetadata.swift; sourceTree = "<group>"; };
 		0CF41E18285193210040B062 /* zoramania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoramania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF41E1B285193210040B062 /* zoramaniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoramaniaApp.swift; sourceTree = "<group>"; };
 		0CF41E1D285193210040B062 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,8 +115,26 @@
 		0C9AC23128526A2000883189 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0CF41E1D285193210040B062 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0C9AC2362852DED700883189 /* queries */ = {
+			isa = PBXGroup;
+			children = (
+				0CF41E4A28519DFC0040B062 /* queries.graphql */,
+				0C9AC23228526F5100883189 /* wallet.graphql */,
+			);
+			path = queries;
+			sourceTree = "<group>";
+		};
+		0C9AC2372852E11200883189 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C9AC2382852E17A00883189 /* CustomMetadata.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0CF41E0F285193210040B062 = {
@@ -142,15 +162,14 @@
 		0CF41E1A285193210040B062 /* zoramania */ = {
 			isa = PBXGroup;
 			children = (
-				0C9AC23128526A2000883189 /* Views */,
-				0C9AC0FB2851AA9B00883189 /* ZO */,
-				0C9AC0F92851AA4800883189 /* API.swift */,
-				0CF41E4A28519DFC0040B062 /* queries.graphql */,
-				0C9AC23228526F5100883189 /* wallet.graphql */,
-				0CF41E4828519DC30040B062 /* schema.json */,
 				0CF41E1B285193210040B062 /* zoramaniaApp.swift */,
-				0CF41E1D285193210040B062 /* ContentView.swift */,
+				0C9AC2372852E11200883189 /* Model */,
+				0C9AC23128526A2000883189 /* Views */,
+				0C9AC2362852DED700883189 /* queries */,
+				0C9AC0FB2851AA9B00883189 /* ZO */,
 				0CF41E1F285193230040B062 /* Assets.xcassets */,
+				0CF41E4828519DC30040B062 /* schema.json */,
+				0C9AC0F92851AA4800883189 /* API.swift */,
 				0CF41E21285193230040B062 /* Preview Content */,
 			);
 			path = zoramania;
@@ -468,6 +487,7 @@
 				0C9AC0FA2851AA4800883189 /* API.swift in Sources */,
 				0C9AC0FF2851AABD00883189 /* ZONetwork.swift in Sources */,
 				0C9AC0FD2851AAA900883189 /* ZOManager.swift in Sources */,
+				0C9AC2392852E17A00883189 /* CustomMetadata.swift in Sources */,
 				0C9AC23528527A5A00883189 /* ZOHelper.swift in Sources */,
 				0CF41E1C285193210040B062 /* zoramaniaApp.swift in Sources */,
 			);
