@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0C9AC0FA2851AA4800883189 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC0F92851AA4800883189 /* API.swift */; };
-		0C9AC0FD2851AAA900883189 /* ZOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC0FC2851AAA900883189 /* ZOManager.swift */; };
 		0C9AC0FF2851AABD00883189 /* ZONetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC0FE2851AABD00883189 /* ZONetwork.swift */; };
 		0C9AC23328526F5100883189 /* wallet.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0C9AC23228526F5100883189 /* wallet.graphql */; };
 		0C9AC23528527A5A00883189 /* ZOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC23428527A5A00883189 /* ZOHelper.swift */; };
 		0C9AC2392852E17A00883189 /* CustomMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC2382852E17A00883189 /* CustomMetadata.swift */; };
-		0CF41E1C285193210040B062 /* zoramaniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E1B285193210040B062 /* zoramaniaApp.swift */; };
-		0CF41E1E285193210040B062 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E1D285193210040B062 /* ContentView.swift */; };
+		0C9AC2AA2853037C00883189 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC2A92853037C00883189 /* AppDelegate.swift */; };
+		0C9AC2AC285303DE00883189 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC2AB285303DE00883189 /* SceneDelegate.swift */; };
+		0C9AC2AE285303F200883189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9AC2AD285303F200883189 /* Main.storyboard */; };
+		0C9AC2D02853062D00883189 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC2CF2853062D00883189 /* ViewController.swift */; };
+		0C9AC2D328530A0A00883189 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9AC2D228530A0A00883189 /* LaunchScreen.storyboard */; };
+		0C9AC2D52853D23200883189 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC2D42853D23200883189 /* CustomCells.swift */; };
+		0C9AC2D72853D4B700883189 /* WalletDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9AC2D62853D4B700883189 /* WalletDataManager.swift */; };
 		0CF41E20285193230040B062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF41E1F285193230040B062 /* Assets.xcassets */; };
 		0CF41E23285193230040B062 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF41E22285193230040B062 /* Preview Assets.xcassets */; };
 		0CF41E2D285193230040B062 /* zoramaniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF41E2C285193230040B062 /* zoramaniaTests.swift */; };
@@ -46,14 +50,19 @@
 
 /* Begin PBXFileReference section */
 		0C9AC0F92851AA4800883189 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		0C9AC0FC2851AAA900883189 /* ZOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOManager.swift; sourceTree = "<group>"; };
 		0C9AC0FE2851AABD00883189 /* ZONetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZONetwork.swift; sourceTree = "<group>"; };
 		0C9AC23228526F5100883189 /* wallet.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = wallet.graphql; sourceTree = "<group>"; };
 		0C9AC23428527A5A00883189 /* ZOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOHelper.swift; sourceTree = "<group>"; };
 		0C9AC2382852E17A00883189 /* CustomMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMetadata.swift; sourceTree = "<group>"; };
+		0C9AC2A92853037C00883189 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C9AC2AB285303DE00883189 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0C9AC2AD285303F200883189 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0C9AC2CF2853062D00883189 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C9AC2D1285306A800883189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0C9AC2D228530A0A00883189 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C9AC2D42853D23200883189 /* CustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
+		0C9AC2D62853D4B700883189 /* WalletDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDataManager.swift; sourceTree = "<group>"; };
 		0CF41E18285193210040B062 /* zoramania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoramania.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CF41E1B285193210040B062 /* zoramaniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoramaniaApp.swift; sourceTree = "<group>"; };
-		0CF41E1D285193210040B062 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0CF41E1F285193230040B062 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CF41E22285193230040B062 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0CF41E28285193230040B062 /* zoramaniaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zoramaniaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +114,6 @@
 		0C9AC0FB2851AA9B00883189 /* ZO */ = {
 			isa = PBXGroup;
 			children = (
-				0C9AC0FC2851AAA900883189 /* ZOManager.swift */,
 				0C9AC0FE2851AABD00883189 /* ZONetwork.swift */,
 				0C9AC23428527A5A00883189 /* ZOHelper.swift */,
 			);
@@ -115,7 +123,10 @@
 		0C9AC23128526A2000883189 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0CF41E1D285193210040B062 /* ContentView.swift */,
+				0C9AC2D228530A0A00883189 /* LaunchScreen.storyboard */,
+				0C9AC2AD285303F200883189 /* Main.storyboard */,
+				0C9AC2CF2853062D00883189 /* ViewController.swift */,
+				0C9AC2D42853D23200883189 /* CustomCells.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +143,7 @@
 		0C9AC2372852E11200883189 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C9AC2D62853D4B700883189 /* WalletDataManager.swift */,
 				0C9AC2382852E17A00883189 /* CustomMetadata.swift */,
 			);
 			path = Model;
@@ -162,11 +174,13 @@
 		0CF41E1A285193210040B062 /* zoramania */ = {
 			isa = PBXGroup;
 			children = (
-				0CF41E1B285193210040B062 /* zoramaniaApp.swift */,
-				0C9AC2372852E11200883189 /* Model */,
+				0C9AC2D1285306A800883189 /* Info.plist */,
+				0C9AC2A92853037C00883189 /* AppDelegate.swift */,
+				0C9AC2AB285303DE00883189 /* SceneDelegate.swift */,
 				0C9AC23128526A2000883189 /* Views */,
-				0C9AC2362852DED700883189 /* queries */,
+				0C9AC2372852E11200883189 /* Model */,
 				0C9AC0FB2851AA9B00883189 /* ZO */,
+				0C9AC2362852DED700883189 /* queries */,
 				0CF41E1F285193230040B062 /* Assets.xcassets */,
 				0CF41E4828519DC30040B062 /* schema.json */,
 				0C9AC0F92851AA4800883189 /* API.swift */,
@@ -336,6 +350,8 @@
 				0C9AC23328526F5100883189 /* wallet.graphql in Resources */,
 				0CF41E23285193230040B062 /* Preview Assets.xcassets in Resources */,
 				0CF41E4928519DC30040B062 /* schema.json in Resources */,
+				0C9AC2AE285303F200883189 /* Main.storyboard in Resources */,
+				0C9AC2D328530A0A00883189 /* LaunchScreen.storyboard in Resources */,
 				0CF41E4B28519DFC0040B062 /* queries.graphql in Resources */,
 				0CF41E20285193230040B062 /* Assets.xcassets in Resources */,
 			);
@@ -483,13 +499,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CF41E1E285193210040B062 /* ContentView.swift in Sources */,
+				0C9AC2D72853D4B700883189 /* WalletDataManager.swift in Sources */,
+				0C9AC2D02853062D00883189 /* ViewController.swift in Sources */,
+				0C9AC2AA2853037C00883189 /* AppDelegate.swift in Sources */,
+				0C9AC2D52853D23200883189 /* CustomCells.swift in Sources */,
+				0C9AC2AC285303DE00883189 /* SceneDelegate.swift in Sources */,
 				0C9AC0FA2851AA4800883189 /* API.swift in Sources */,
 				0C9AC0FF2851AABD00883189 /* ZONetwork.swift in Sources */,
-				0C9AC0FD2851AAA900883189 /* ZOManager.swift in Sources */,
 				0C9AC2392852E17A00883189 /* CustomMetadata.swift in Sources */,
 				0C9AC23528527A5A00883189 /* ZOHelper.swift in Sources */,
-				0CF41E1C285193210040B062 /* zoramaniaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,9 +669,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zoramania/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = zoramania/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -680,9 +700,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zoramania/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = zoramania/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

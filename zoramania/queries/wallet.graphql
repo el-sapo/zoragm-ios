@@ -6,9 +6,8 @@ query Wallet($addresses: [String!]) {
     nodes {
       token {
         collectionAddress
-        tokenId
+        collectionName
         name
-        owner
         image {
           url
         }

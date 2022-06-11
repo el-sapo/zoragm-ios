@@ -13,12 +13,19 @@ struct CustomMetadata: Decodable {
     var imageUrl: String?
     var animationUrl: String?
     var attributes: [Attribute]?
+    var collectionInfo: CollectionInfo?
 }
 
 struct Attribute: Decodable {
     let trait_type: String?
     let value: String?
 }
+
+struct CollectionInfo: Decodable {
+    let collectionAddress: String?
+    let collectionName: String?
+}
+
 extension CustomMetadata {
     init(items: [String: Any]) {
         for item in items {
