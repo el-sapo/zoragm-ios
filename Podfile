@@ -8,7 +8,10 @@ target 'zoramania' do
   # Pods for zoramania
 	pod "Apollo"
   pod 'SDWebImage', '~> 5.0'
-
+  pod 'SDWebImageSVGCoder'
+  pod 'SVGKit'
+  pod 'ProgressHUD'
+  
   target 'zoramaniaTests' do
     inherit! :search_paths
     # Pods for testing

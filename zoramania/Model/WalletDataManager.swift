@@ -13,9 +13,11 @@ class WalletDataManager {
 
     func loadWalletInfo(refresh: @escaping (Bool, String?)->()) {
         if addresses.count > 0 {
-            ZONetwork.shared.getWalletAddresses(addresses) { result in
+            ZONetwork.shared.getWalletAddresses(addresses) { [weak self] result in
+                guard let aSelf = self else { return }
                 switch result {
                 case .success(let metadataList):
+                    aSelf.walletItems = metadataList
                     refresh(true, nil)
                     print(metadataList.count)
                 case .failure(_):
@@ -23,6 +25,8 @@ class WalletDataManager {
                     print("failure")
                 }
             }
+        } else {
+            refresh(true, nil)
         }
     }
 }
