@@ -7,11 +7,36 @@
 
 import UIKit
 import WebKit
+import SDWebImage
 
 class TokenPreviewCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imgPreview: UIImageView!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var lblName: UILabel!
+    
+    func loadImage(imageStr: String?) {
+        guard let imgStr = imageStr else { return }
+        print(imgStr)
+        if imgStr.contains("ipfs") {
+            imgPreview.isHidden = true
+            webView.isHidden = false
+            // loading ipfs images in UIView does not work well, so we load them in web
+            webView.load(URLRequest(url: URL(string: imgStr)!))
+        } else if imgStr.contains("http") {
+            imgPreview.isHidden = false
+            webView.isHidden = true
+            imgPreview.sd_setImage(with: URL(string: imgStr), placeholderImage: UIImage(named: "placeholder"))
+        } else if imgStr.contains("data:image/svg+xml;base64") {
+            imgPreview.isHidden = true
+            webView.isHidden = false
+            print(self.webView.frame.width)
+            let htmlImage = "<img width=100% height=100% src=\"\(imgStr)\"/>"
+            webView.loadHTMLString(htmlImage, baseURL: nil)
+        } else {
+            imgPreview.isHidden = true
+            webView.isHidden = true
+        }
+    }
 }
 
 class AddressTableCell: UITableViewCell {

@@ -7,9 +7,7 @@
 
 import Foundation
 import UIKit
-import SDWebImage
-import SDWebImageSVGCoder
-import SVGKit
+import ProgressHUD
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -17,24 +15,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var collectionTop: NSLayoutConstraint!
     
     let walletDataManager = WalletDataManager()
-    let columnLayout = ColumnFlowLayout(
-            cellsPerRow: 2,
-            minimumInteritemSpacing: 5,
-            minimumLineSpacing: 10,
-            sectionInset: UIEdgeInsets(top: 10, left: 5, bottom: 20, right: 5),
-            titleHeight: 50
-        )
+    let columnLayout = ColumnFlowLayout(cellsPerRow: 2,
+                                        minimumInteritemSpacing: 5,
+                                        minimumLineSpacing: 10,
+                                        sectionInset: UIEdgeInsets(top: 10, left: 5, bottom: 20, right: 5),
+                                        titleHeight: 50)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.collectionViewLayout = columnLayout
         collectionView?.contentInsetAdjustmentBehavior = .always
 
+        ProgressHUD.animationType = .multipleCirclePulse
         walletDataManager.addresses.append("elsapo.eth")
         loadWalletInfo()
     }
             
     func loadWalletInfo() {
+        ProgressHUD.show()
         self.tableView.reloadData()
         collectionTop.constant = 0
         walletDataManager.loadWalletInfo() { [weak self] refresh, error in
@@ -42,15 +40,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 print(error)
             }
             DispatchQueue.main.async { [weak self] in
-                self?.collectionView.reloadData()
-                self?.walletAction(	)
+                guard let aSelf = self else { return }
+                if aSelf.walletDataManager.walletItems.count > 0 {
+                    aSelf.collectionTop.constant = 0.0
+                }
+                aSelf.collectionView.reloadData()
+                ProgressHUD.dismiss()
             }
         }
     }
     
-    @IBAction func walletAction() {
+    @IBAction func walletAction(forceHide: Bool = false) {
         var newTop = 0.0
-        if collectionTop.constant == 0 {
+        if collectionTop.constant == 0 && !forceHide {
             newTop = 200.0
         }
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut]) { [weak self] in
@@ -67,23 +69,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TokenPreviewCollectionCell", for: indexPath) as! TokenPreviewCollectionCell
         let metadata = walletDataManager.walletItems[indexPath.row]
         cell.lblName.text = metadata.name ?? ""
-        if let imageUrl = metadata.imageUrl {
-            print(imageUrl)
-            if imageUrl.contains("ipfs") {
-                cell.imgPreview.isHidden = true
-                cell.webView.load(URLRequest(url: URL(string: imageUrl)!))
-            } else if imageUrl.contains("http") {
-                cell.imgPreview.isHidden = false
-                cell.imgPreview.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder"))
-            } else if imageUrl.contains("data:image/svg+xml;base6") {
-                /// Convert base64-encoded String to UIImage
-                    let imageData = imageUrl.replacingOccurrences(of: "data:image/svg+xml;base64 ,", with: "")
-                    let stringData = Data(base64Encoded: imageData)
-                    if let sd = stringData {
-                        cell.imgPreview.isHidden = true
-                }
-            }
-        }
+        cell.loadImage(imageStr: metadata.imageUrl)
         return cell
     }
 
@@ -112,6 +98,8 @@ extension ViewController: UITextFieldDelegate {
             loadWalletInfo()
         }
         textField.text = ""
+        textField.endEditing(true)
+        walletAction(forceHide: true)
         return true
     }
 }

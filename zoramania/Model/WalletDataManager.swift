@@ -18,6 +18,9 @@ class WalletDataManager {
                 switch result {
                 case .success(let metadataList):
                     aSelf.walletItems = metadataList
+                    aSelf.walletItems.sort { meta1, meta2 in
+                        meta1.collectionInfo?.collectionAddress ?? "" < meta2.collectionInfo?.collectionAddress ?? ""
+                    }
                     refresh(true, nil)
                     print(metadataList.count)
                 case .failure(_):

@@ -18,13 +18,13 @@ struct CustomMetadata: Decodable {
 }
 
 struct Attribute: Decodable {
-    let trait_type: String?
-    let value: String?
+    var trait_type: String?
+    var value: String?
 }
 
 struct CollectionInfo: Decodable {
-    let collectionAddress: String?
-    let collectionName: String?
+    var collectionAddress: String?
+    var collectionName: String?
 }
 
 extension CustomMetadata {

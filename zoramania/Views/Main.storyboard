@@ -96,11 +96,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <wkWebView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="OY7-M2-DZb">
+                                                <wkWebView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="OY7-M2-DZb">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO">
-                                                        <dataDetectorTypes key="dataDetectorTypes"/>
+                                                        <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                         <wkPreferences key="preferences"/>
                                                     </wkWebViewConfiguration>
@@ -146,7 +146,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U2-KI-wHo">
-                                <rect key="frame" x="177" y="766" width="60" height="60"/>
+                                <rect key="frame" x="177" y="762" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ErB-1v-77Y"/>
                                     <constraint firstAttribute="width" constant="60" id="NvM-ij-4zB"/>
@@ -154,20 +154,20 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="wallet"/>
                                 <connections>
-                                    <action selector="walletActionWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qsz-ST-viT"/>
+                                    <action selector="walletActionWithForceHide:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pn4-vt-GLb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1U2-KI-wHo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="722" id="C1B-QJ-3GB"/>
                             <constraint firstItem="TFg-dK-dO3" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Dtj-Bq-c0P"/>
                             <constraint firstItem="TFg-dK-dO3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Nug-Pf-Jn8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="khx-ho-ItO" secondAttribute="bottom" id="Qfn-cp-MRd"/>
                             <constraint firstItem="khx-ho-ItO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="200" id="RGn-O9-U3R"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1U2-KI-wHo" secondAttribute="trailing" constant="177" id="cSI-ry-0GH"/>
                             <constraint firstItem="khx-ho-ItO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="dGx-4h-qLr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1U2-KI-wHo" secondAttribute="bottom" constant="40" id="ep7-k3-rB6"/>
                             <constraint firstItem="TFg-dK-dO3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tDn-R5-r7L"/>
                             <constraint firstItem="khx-ho-ItO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wQL-CD-pT5"/>
                         </constraints>
