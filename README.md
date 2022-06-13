@@ -1,9 +1,8 @@
 # zoragm-ios
 
-For Web3 to gain adpotion both for users and builders, it's User interface and experience needs to evolve into more rich, seamless and customized solutions. Building native apps is a great way to get the most out of devices capabilites and resources to create personalized experiences. 
-I created this project to show other builders how easy it is to integrate your apps to web3 content (thanks Zora for this API!) and not feel overwhelmed by the steep learning curve to start developing your web3 apps. Mobile native experiences will become very important when it comes to NFT gaming and metaverse applications. 
+For Web3 to gain adoption both for users and builders, apps user interface and experience needs to evolve into more rich, intuitive and customized solutions. Building native apps is a great way to get the most out of devices capabilities and resources to create personalized experiences. I created this project to show other builders how easy it is to integrate your apps with web3 content (thanks Zora for this API!) and not feel overwhelmed by the steep learning curve to start developing web3 apps. Mobile native experiences will become very important when it comes to NFT gaming and metaverse applications.
 
-This project is a quickstart and sample code on how to use ZORA API to query blockchain information. 
+This project is a quickstart with sample code and tools to use ZORA API to query blockchain information for native iOS apps. 
 https://docs.zora.co/
 
 ![zoragm](https://user-images.githubusercontent.com/104182252/173267051-6c53e5a6-a772-4fd6-abe8-2526527f54f7.gif)
