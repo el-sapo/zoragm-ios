@@ -11,19 +11,20 @@ struct CustomMetadata: Decodable {
     var name: String?
     var description: String?
     var imageUrl: String?
+//    var imageData: Any?
     var animationUrl: String?
     var attributes: [Attribute]?
     var collectionInfo: CollectionInfo?
 }
 
 struct Attribute: Decodable {
-    let trait_type: String?
-    let value: String?
+    var trait_type: String?
+    var value: String?
 }
 
 struct CollectionInfo: Decodable {
-    let collectionAddress: String?
-    let collectionName: String?
+    var collectionAddress: String?
+    var collectionName: String?
 }
 
 extension CustomMetadata {
@@ -35,11 +36,8 @@ extension CustomMetadata {
                 self.description = item.value as? String
             } else if item.key == "image" {
                 if let imgString = item.value as? String {
-                    self.imageUrl = imgString
-                } else {
-                    // this field sometimes comes as data, add parse for this type
-                    print("metadata image path is not string")
-                }
+                    self.imageUrl = imgString.replacingOccurrences(of: "ipfs://", with: "https://ipfs.io/ipfs/")
+                } 
             } else if item.key == "attributes" {
                 // parse atrributes
             } else if item.key == "animation_url" {

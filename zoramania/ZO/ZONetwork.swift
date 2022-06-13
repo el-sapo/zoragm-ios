@@ -41,7 +41,12 @@ class ZONetwork {
                         // JSON deserializer crashes with some contents in metadata, so we have to do it manually
                         switch token.token.metadata {
                         case .dictionary(let metaItems):
-                            let metadata = CustomMetadata(items: metaItems)
+                            var metadata = CustomMetadata(items: metaItems)
+                            
+                            metadata.collectionInfo = CollectionInfo(
+                                collectionAddress: token.token.collectionAddress,
+                                collectionName: token.token.collectionName)
+                            
                             resultTokens.append(metadata)
                         case .array(_):
                             print("metadata should be dictionary")

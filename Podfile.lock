@@ -2,23 +2,27 @@ PODS:
   - Apollo (0.51.2):
     - Apollo/Core (= 0.51.2)
   - Apollo/Core (0.51.2)
+  - ProgressHUD (13.6)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
 
 DEPENDENCIES:
   - Apollo
+  - ProgressHUD
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - Apollo
+    - ProgressHUD
     - SDWebImage
 
 SPEC CHECKSUMS:
   Apollo: e5bc805c3f3556c18edc4eae4e2ea4723cea2318
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: 666f1b4160319ca338501ebf9794f48b475985b1
+PODFILE CHECKSUM: 2ac5e40d31c1c3502badf3ce1cfce78f1fbcff5a
 
 COCOAPODS: 1.11.3
