@@ -6,7 +6,7 @@ https://docs.zora.co/
 ![zoragm](https://user-images.githubusercontent.com/104182252/173267051-6c53e5a6-a772-4fd6-abe8-2526527f54f7.gif)
 
 It includes some sample queries (get wallet NFTs and get top collections) and Apollo integration setup for the communication with the API. 
-To add more queries you simply need to add queries to the existing .graphql files or create new ones. Apollo will automatically read the queries and generate the swift code to interact with the API. 
+To add more queries you simply need to add them to the existing .graphql files or create new files and add them there, as long as they have the .graphql extension. Apollo will automatically read the queries and generate the swift code on every build run to interact with the API. 
 
 The code to connect to the ZORA API is inside the ZO folder, there you will find:
 - ZONetwork file that shows examples of how to fetch the data from the ZORA API. It has access to the queries created in your .graphql files and where you can do your customizations.
