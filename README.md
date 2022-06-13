@@ -5,7 +5,7 @@ For Web3 to gain adoption both for users and builders, apps user interface and e
 This project is a quickstart with sample code and tools to use ZORA API to query blockchain information for native iOS apps. 
 https://docs.zora.co/
 
-![zoragm](https://user-images.githubusercontent.com/104182252/173267051-6c53e5a6-a772-4fd6-abe8-2526527f54f7.gif)
+![zoragm]([https://user-images.githubusercontent.com/104182252/173267051-6c53e5a6-a772-4fd6-abe8-2526527f54f7.gif](https://gateway.pinata.cloud/ipfs/QmYYsgGPeTnDQzk7Amx7SzksWXkfC8wW5zduaNgCyUQAg2))
 
 [will update with appstore link once it finishes review process by apple]
 
@@ -29,3 +29,9 @@ Dependencies that are included:
 - Apollo: https://github.com/apollographql/apollo-ios
 - SDWebImage: https://github.com/SDWebImage/SDWebImage
 - ProgressHUD: https://github.com/relatedcode/ProgressHUD
+
+
+IMPROVEMENTS (After Zora hackaton):
+- Offline storage of data (REALM)
+- Image handling improvement: large ipfs files have problems loading and need to add loader and improve caching 
+- Unstoppable Domains support
