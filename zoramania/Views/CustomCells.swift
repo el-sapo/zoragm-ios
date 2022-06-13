@@ -21,7 +21,9 @@ class TokenPreviewCollectionCell: UICollectionViewCell {
             imgPreview.isHidden = true
             webView.isHidden = false
             // loading ipfs images in UIView does not work well, so we load them in web
-            webView.load(URLRequest(url: URL(string: imgStr)!))
+            if let url = URL(string: imgStr) {
+                webView.load(URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 360))
+            }
         } else if imgStr.contains("http") {
             imgPreview.isHidden = false
             webView.isHidden = true

@@ -8,9 +8,21 @@
 import Foundation
 
 class WalletDataManager {
+    let walletKey = "wallets"
     var walletItems: [CustomMetadata] = []
-    var addresses: [String] = []
+    var addresses: [String] = [] {
+        didSet {
+            UserDefaults().set(addresses, forKey: walletKey)
+        }
+    }
 
+    func loadDefaultWallets() {
+        let defaults = UserDefaults().object(forKey: walletKey)
+        if let wallets = defaults as? [String] {
+            addresses = wallets
+        }
+    }
+    
     func loadWalletInfo(refresh: @escaping (Bool, String?)->()) {
         if addresses.count > 0 {
             ZONetwork.shared.getWalletAddresses(addresses) { [weak self] result in
@@ -23,12 +35,12 @@ class WalletDataManager {
                     }
                     refresh(true, nil)
                     print(metadataList.count)
-                case .failure(_):
-                    refresh(true, "failed to load")
-                    print("failure")
+                case .failure(let error):
+                    refresh(true, error.localizedDescription)
                 }
             }
         } else {
+            walletItems = []
             refresh(true, nil)
         }
     }
