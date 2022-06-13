@@ -5,7 +5,8 @@ For Web3 to gain adoption both for users and builders, apps user interface and e
 This project is a quickstart with sample code and tools to use ZORA API to query blockchain information for native iOS apps. 
 https://docs.zora.co/
 
-![zoragm]([https://user-images.githubusercontent.com/104182252/173267051-6c53e5a6-a772-4fd6-abe8-2526527f54f7.gif](https://gateway.pinata.cloud/ipfs/QmYYsgGPeTnDQzk7Amx7SzksWXkfC8wW5zduaNgCyUQAg2))
+![fedegm-sm](https://user-images.githubusercontent.com/104182252/173390912-e699cb30-cb46-4817-b13d-19e2f55e3b2e.gif)
+
 
 [will update with appstore link once it finishes review process by apple]
 
