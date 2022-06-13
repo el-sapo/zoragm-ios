@@ -21,7 +21,7 @@ It is common to have ipfs and svg images as part of the metadata for your NFTs, 
 
 Installation:
 
-The project uses COCOAPODS to install dependencies.
+The project uses COCOAPODS to manage dependencies.
 https://guides.cocoapods.org/using/getting-started.html
 
 Once you set up cocoapods (and run pod install) open the workspace and you should be all set to run the project
