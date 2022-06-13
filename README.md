@@ -8,6 +8,8 @@ https://docs.zora.co/
 
 ![zoragm](https://user-images.githubusercontent.com/104182252/173267051-6c53e5a6-a772-4fd6-abe8-2526527f54f7.gif)
 
+[will update with appstore link once it finishes review process by apple]
+
 It includes some sample queries (get wallet NFTs and get top collections) and Apollo GraphQL integration setup for the communication with the Zora API. 
 To add more queries you simply need to add them to the existing .graphql files or create new files. As long as the files have the .graphql extension, Apollo will automatically read the queries and generate the swift code on every build run, so that you can integrate then with the api using native SWIFT code. 
 
