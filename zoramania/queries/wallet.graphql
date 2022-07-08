@@ -9,7 +9,14 @@ query Wallet($addresses: [String!]) {
         collectionName
         name
         image {
+          mimeType
           url
+          mediaEncoding {
+            ... on ImageEncodingTypes {
+                large
+                poster
+            }
+          }
         }
         metadata
       }

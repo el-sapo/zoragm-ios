@@ -11,6 +11,7 @@ struct CustomMetadata: Decodable {
     var name: String?
     var description: String?
     var imageUrl: String?
+    var imgPoster: String?
 //    var imageData: Any?
     var animationUrl: String?
     var attributes: [Attribute]?
@@ -28,7 +29,8 @@ struct CollectionInfo: Decodable {
 }
 
 extension CustomMetadata {
-    init(items: [String: Any]) {
+    init(items: [String: Any], posterImage: String? = nil) {
+        imgPoster = posterImage
         for item in items {
             if item.key == "name" {
                 self.name = item.value as? String
