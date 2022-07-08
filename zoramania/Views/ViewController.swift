@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import ProgressHUD
+import Combine
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,7 +17,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var walletView: UIView!
     
     let walletViewHeight = 200.0
-    let walletDataManager = WalletDataManager()
+    let walletDataManager: WalletDataManager = {
+        let wManager = WalletDataManager()
+        wManager.loadDefaultWallets()
+        return wManager
+    }()
+    var observer: AnyCancellable?
+    
     let columnLayout = ColumnFlowLayout(cellsPerRow: 2,
                                         minimumInteritemSpacing: 5,
                                         minimumLineSpacing: 10,
@@ -33,19 +40,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         ProgressHUD.animationType = .multipleCirclePulse
 
         // load wallets info
-        walletDataManager.loadDefaultWallets()
-        loadWalletInfo()
-    }
-            
-    func loadWalletInfo() {
-        ProgressHUD.show()
-        self.tableView.reloadData()
-        collectionTop.constant = 0
-        
-        walletDataManager.loadWalletInfo() { [weak self] refresh, wError in
-            DispatchQueue.main.async { [weak self] in
+        observer = walletDataManager.action
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] error in
                 guard let aSelf = self else { return }
-                if let error = wError {
+
+                if let error = error {
                     print(error)
                     aSelf.showAlert(title: "Failed to get wallet info", message: error)
                 }
@@ -56,7 +56,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 aSelf.collectionView.reloadData()
                 ProgressHUD.dismiss()
             }
-        }
+         loadWalletInfo()
+    }
+            
+    func loadWalletInfo() {
+        ProgressHUD.show()
+        self.tableView.reloadData()
+        collectionTop.constant = 0
+        
+        walletDataManager.loadWalletInfo()
     }
     
     @IBAction func walletAction(forceHide: Bool = false) {
@@ -83,7 +91,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TokenPreviewCollectionCell", for: indexPath) as! TokenPreviewCollectionCell
         let metadata = walletDataManager.walletItems[indexPath.row]
         cell.lblName.text = metadata.name ?? ""
-        cell.loadImage(imageStr: metadata.imageUrl)
+        cell.loadImage(imageStr: metadata.imgPoster ?? metadata.imageUrl)
         return cell
     }
 

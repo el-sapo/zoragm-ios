@@ -16,7 +16,6 @@ class TokenPreviewCollectionCell: UICollectionViewCell {
     
     func loadImage(imageStr: String?) {
         guard let imgStr = imageStr else { return }
-        print(imgStr)
         if imgStr.contains("ipfs") {
             imgPreview.isHidden = true
             webView.isHidden = false
@@ -31,7 +30,6 @@ class TokenPreviewCollectionCell: UICollectionViewCell {
         } else if imgStr.contains("data:image/svg+xml;base64") {
             imgPreview.isHidden = true
             webView.isHidden = false
-            print(self.webView.frame.width)
             let htmlImage = "<img width=100% height=100% src=\"\(imgStr)\"/>"
             webView.loadHTMLString(htmlImage, baseURL: nil)
         } else {
